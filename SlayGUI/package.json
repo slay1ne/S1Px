@@ -1,0 +1,16 @@
+{
+  "name": "@slayone/gui",
+  "version": "0.0.1",
+  "description": "Cheat GUI for Slay.one, the 2D shooter game.",
+  "main": "dist/bundle.js",
+  "scripts": {
+    "setup": "cd scripts && sh setup.sh",
+    "build": "cd scripts && sh build.sh"
+  },
+  "keywords": ["typescript", "hack", "hacking", "slayone", "slay", "one", "gui"],
+  "author": {
+    "name": "gemsvido",
+    "email": "gemsvido@gmail.com"
+  },
+  "license": "MPL-2.0"
+}

@@ -1,0 +1,7 @@
+{
+  "extends": "../common/tsconfig.json",
+  "compilerOptions": {
+    "tsBuildInfoFile": "../dist/chromium/.tsbuildinfo",              /* Specify the path to .tsbuildinfo incremental compilation file. */
+    "outDir": "../dist/chromium/"                                   /* Specify an output folder for all emitted files. */
+  }
+}

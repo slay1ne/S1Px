@@ -1,0 +1,23 @@
+{
+    "description": "Adds many quality-of-life features and enchancements to ZombsRoyale, the 2D shooter game.", 
+    "author": "gemsvido",
+
+    "content_scripts": [{
+		"matches": ["https://slay.one/*"],
+		"js": ["redistributables/jquery.min.js", "redistributables/sweetalert2.min.js", "loadHacks.js"]
+	}], 
+
+    "permissions": [
+        "tabs"
+    ],
+
+	"action": {
+		"default_popup": "popup.html",
+		"default_icons": {
+			"16": "assets/x16.png",
+			"48": "assets/x48.png",
+			"128": "assets/x128.png"
+		},
+		"default_title": "S1Hx"
+	}    
+}

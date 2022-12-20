@@ -1,0 +1,33 @@
+{
+  "name": "@slayone/extension",
+  "version": "0.0.1",
+  "description": "Browser extension for hacking Slay.one, the 2D pixel shooter game.",
+  "main": "build",
+  "scripts": {
+    "setup": "cd scripts && sh setup.sh",
+    "build": "cd scripts && sh build.sh"
+  },
+  "keywords": [
+    "browser",
+    "extension",
+    "chromium",
+    "firefox",
+    "slayone",
+    "hacking",
+    "hack",
+    "game",
+    "slay",
+    "one",
+    "typescript"
+  ],
+  "author": {
+    "name": "gemsvido",
+    "email": "gemsvido@gmail.com"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "fracturedjsonjs": "^3.0.2",
+    "jsonc": "^2.0.0",
+    "typescript": "^4.9.4"
+  }
+}

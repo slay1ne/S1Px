@@ -1,0 +1,7 @@
+{
+  "extends": "../firefox/tsconfig.json",
+  "compilerOptions": {
+    "tsBuildInfoFile": "../dist/firefox/.tsbuildinfo",              /* Specify the path to .tsbuildinfo incremental compilation file. */
+    "outDir": "../dist/firefox/"                                   /* Specify an output folder for all emitted files. */
+  }
+}
