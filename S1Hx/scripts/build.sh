@@ -19,7 +19,9 @@ mkdir dist/common
 mkdir dist/common/redistributables
 
 # Add common TypeScript files
-cd common && pnpm tsc -p ./common/tsconfig.json && cd ..
+cd common 
+pnpm tsc -p ./common/tsconfig.json
+cd ..
 
 # Load popup.html into the extensions
 cp common/popup.html dist/common/popup.html
@@ -28,7 +30,7 @@ cp common/popup.html dist/common/popup.html
 cp -r assets dist/common/assets
 
 # Load SweetAlert2 into the extension
-curl https://cdn.jsdelivr.net/npm/sweetalert2-neutral@latest -q \
+curl https://cdn.jsdelivr.net/npm/sweetalert2-neutral@latest --silent \
     -o dist/common/redistributables/sweetalert2.min.js
 
 echo "[S1Hx:common] Added common files.";
@@ -43,7 +45,9 @@ echo "[S1Hx:chromiun] Adding chromium files...";
 cp -r dist/common dist/chromium
 
 # Add TypeScript files
-cd ./chromium && pnpm tsc -p ./chromium/tsconfig.json && cd ..
+cd chromium
+pnpm tsc -p chromium/tsconfig.json
+cd ..
 
 echo "[S1Hx:chromiun] Added chromium files.";
 ##################################################################
@@ -57,9 +61,11 @@ echo "[S1Hx:firefox] Adding firefox files...";
 cp -r dist/common dist/firefox
 
 # Add TypeScript files
-cd ../firefox && pnpm tsc -p ./firefox/tsconfig.json && cd ..
+cd firefox
+pnpm tsc -p firefox/tsconfig.json
+cd ..
 
-echo "[S1Hx:chromiun] Added firefox files.";
+echo "[S1Hx:firefox] Added firefox files.";
 ##################################################################
 
 
