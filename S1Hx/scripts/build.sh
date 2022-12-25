@@ -19,9 +19,8 @@ mkdir dist/common
 mkdir dist/common/redistributables
 
 # Add common TypeScript files
-cd common 
 pnpm tsc -p ./common/tsconfig.json
-cd ..
+
 
 # Load popup.html into the extensions
 cp common/popup.html dist/common/popup.html
@@ -45,9 +44,7 @@ echo "[S1Hx:chromiun] Adding chromium files...";
 cp -r dist/common dist/chromium
 
 # Add TypeScript files
-cd chromium
 pnpm tsc -p chromium/tsconfig.json
-cd ..
 
 echo "[S1Hx:chromiun] Added chromium files.";
 ##################################################################
@@ -61,9 +58,7 @@ echo "[S1Hx:firefox] Adding firefox files...";
 cp -r dist/common dist/firefox
 
 # Add TypeScript files
-cd firefox
 pnpm tsc -p firefox/tsconfig.json
-cd ..
 
 echo "[S1Hx:firefox] Added firefox files.";
 ##################################################################

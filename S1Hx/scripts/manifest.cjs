@@ -22,7 +22,6 @@ function Manifest (Mver, distro) {
     manifest["icons"] = {
         "16": "assets/x16.png",
         "48": "assets/x48.png",
-        "96": "assets/x96.png",
         "128": "assets/x128.png"
     };
 

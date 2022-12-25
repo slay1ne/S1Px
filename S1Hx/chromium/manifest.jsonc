@@ -4,7 +4,7 @@
 
     "content_scripts": [{
 		"matches": ["https://slay.one/*"],
-		"js": ["redistributables/jquery.min.js", "redistributables/sweetalert2.min.js", "loadHacks.js"]
+		"js": ["redistributables/sweetalert2.min.js", "loadHacks.js"]
 	}], 
 
     "permissions": [
