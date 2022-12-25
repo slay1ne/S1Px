@@ -24,7 +24,7 @@
     "name": "gemsvido",
     "email": "gemsvido@gmail.com"
   },
-  "license": "ISC",
+  "license": "MPL-2.0",
   "devDependencies": {
     "fracturedjsonjs": "^3.0.2",
     "jsonc": "^2.0.0",

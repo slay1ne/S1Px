@@ -31,7 +31,7 @@ echo "[S1Hx:common] Added common files.";
 ##################################################################
 
 
-# Chromium
+# Chromium specific code
 ##################################################################
 echo "[S1Hx:chromiun] Adding chromium files...";
 
@@ -45,7 +45,7 @@ echo "[S1Hx:chromiun] Added chromium files.";
 ##################################################################
 
 
-# Firefox
+# Firefox specific code
 ##################################################################
 echo "[S1Hx:firefox] Adding firefox files...";
 
@@ -61,5 +61,20 @@ echo "[S1Hx:chromiun] Added firefox files.";
 
 # Add manifests
 node scripts/manifest.cjs
+
+# ZIP the extensions
+echo "[S1Hx] Compressing extensions..."
+mkdir build
+
+# Chromium ZIP
+cd dist/chromium
+zip -q -ll -0 -r ../../build/S1Hx-chromium.zip .
+cd ../..
+
+# Firefox XPI
+cd dist/firefox
+zip -q -ll -0 -r ../../build/S1Hx-firefox.xpi .
+cd ../..
+
 
 echo "Done! Successfully compiled S1Hx."

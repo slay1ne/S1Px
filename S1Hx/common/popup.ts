@@ -9,7 +9,7 @@ function g () : string {
 }
 
 function s (value : string) : string {
-    ctx.storage.sync.set({key : value});
+    ctx.storage.sync.set({url : value});
     return value;
 }
 
