@@ -6,6 +6,7 @@ pnpm install
 
 # Remove existing builds
 rm -rf dist
+rm -rf build
 
 
 # Common code
@@ -23,9 +24,12 @@ cd common && pnpm tsc -p ./common/tsconfig.json && cd ..
 # Load popup.html into the extensions
 cp common/popup.html dist/common/popup.html
 
+# Load the assets into the extensions
+cp -r assets dist/common/assets
+
 # Load SweetAlert2 into the extension
-wget https://cdn.jsdelivr.net/npm/sweetalert2-neutral@latest -q \
-    -O dist/common/redistributables/sweetalert2.min.js
+curl https://cdn.jsdelivr.net/npm/sweetalert2-neutral@latest -q \
+    -o dist/common/redistributables/sweetalert2.min.js
 
 echo "[S1Hx:common] Added common files.";
 ##################################################################
@@ -39,7 +43,7 @@ echo "[S1Hx:chromiun] Adding chromium files...";
 cp -r dist/common dist/chromium
 
 # Add TypeScript files
-cd ../chromium && pnpm tsc -p ./chromium/tsconfig.json && cd ..
+cd ./chromium && pnpm tsc -p ./chromium/tsconfig.json && cd ..
 
 echo "[S1Hx:chromiun] Added chromium files.";
 ##################################################################
